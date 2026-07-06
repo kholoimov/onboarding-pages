@@ -142,16 +142,3 @@ Use the narrowest support path that fits the problem:
 | CERN service incident or access problem | [CERN Service Portal](https://cern.service-now.com/service-portal) |
 | Repository permissions or merge-request review | Repository maintainers or your SHiP contact |
 | Software setup, simulation, geometry, packaging | [SHiP software documentation](https://shipsoft.github.io/Documentation/) and the relevant maintainers |
-
-## Minimal example workflow
-
-Here is a simple first-week target that avoids overloading the onboarding process:
-
-1. Read the public SHiP overview and the software documentation page closest to your task.
-2. Confirm with your supervisor which repository and environment to use.
-3. Clone or open only that repository.
-4. Run one documented setup or test command.
-5. Save a short note with the command, software version, result, and any error.
-6. Bring that note to your first technical meeting.
-
-This is usually more useful than collecting access to every service immediately. A small reproducible result gives your supervisor something concrete to review and exposes the next missing permission or setup step naturally.
