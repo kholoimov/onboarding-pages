@@ -6,12 +6,6 @@ site_url = "https://kholoimov.github.io/onboarding-pages/"
 
 nav = [
   { "Home" = "index.md" },
-  { "First steps" = "first-steps.md" },
-  { "CERN access" = "cern-access.md" },
-  { "Computing" = "computing.md" },
-  { "SHiP work" = "ship-work.md" },
-  { "Checklist" = "checklist.md" },
-  { "Resources" = "resources.md" },
 ]
 
 [project.theme]
