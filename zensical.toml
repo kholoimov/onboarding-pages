@@ -1,0 +1,57 @@
+[project]
+site_name = "SHiP Student Onboarding"
+site_description = "Onboarding guide for new students joining SHiP and CERN"
+site_author = "SHiP Collaboration"
+site_url = "https://kholoimov.github.io/onboarding-pages/"
+
+nav = [
+  { "Home" = "index.md" },
+  { "First steps" = "first-steps.md" },
+  { "CERN access" = "cern-access.md" },
+  { "Computing" = "computing.md" },
+  { "SHiP work" = "ship-work.md" },
+  { "Checklist" = "checklist.md" },
+  { "Resources" = "resources.md" },
+]
+
+[project.theme]
+variant = "classic"
+logo = "https://ship.web.cern.ch/wp-content/uploads/2025/07/SHiP-Symbol_White_logo_webpage-1.png"
+favicon = "https://ship.web.cern.ch/wp-content/uploads/2025/08/115x115.png"
+language = "en"
+
+features = [
+  "content.code.copy",
+  "navigation.expand",
+  "navigation.instant",
+  "navigation.instant.prefetch",
+  "navigation.sections",
+  "navigation.tabs",
+  "search.highlight",
+]
+
+[[project.theme.palette]]
+scheme = "default"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
+
+[[project.theme.palette]]
+scheme = "slate"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to light mode"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/ShipSoft"
+
+[project.markdown_extensions.admonition]
+
+[project.markdown_extensions.toc]
+permalink = true
+
+[project.markdown_extensions.tables]
+
+[project.markdown_extensions.pymdownx.highlight]
+anchor_linenums = true
+
+[project.markdown_extensions.pymdownx.superfences]
