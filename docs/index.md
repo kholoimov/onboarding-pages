@@ -7,23 +7,17 @@ This is a compact starting page for a student joining SHiP work at CERN. It is n
 
 ## 1. Understand where your work fits
 
-Start by reading the public [SHiP website](https://ship.web.cern.ch/) and the [SHiP software documentation](https://shipsoft.github.io/Documentation/). You do not need to understand every detector or software component on day one, but you should be able to answer three questions:
-
-- Which SHiP group or task are you joining?
-- What is your first concrete deliverable?
-- Which repository, dataset, meeting, or document is the source of truth for that deliverable?
-
+Start by reading the public [SHiP website](https://ship.web.cern.ch/) and the [SHiP software documentation](https://shipsoft.github.io/Documentation/). You do not need to understand every detector or software component on day one.
 For software work, also check the [ShipSoft GitHub organization](https://github.com/ShipSoft). Public documentation and public repositories are good entry points, while internal material may require CERN or collaboration access.
 
 ## 2. Sort out CERN registration
 
 Before arrival, confirm your status with your supervisor, team leader, or institute contact. Registration controls many later steps: account creation, site access, insurance questions, safety training, computing eligibility, and protected resources.
 
-Use the [CERN Users Office](https://usersoffice.web.cern.ch/) as the official starting point. In particular, check the [pre-arrival formalities](https://usersoffice.web.cern.ch/pre-arrival-formalities-and-information/) and [first-day onboarding](https://usersoffice.web.cern.ch/first-day-cern-and-onboarding) pages instead of copying their instructions into this guide.
+Use the [CERN Users Office](https://usersoffice.web.cern.ch/) as the official starting point. In particular, check the [pre-arrival formalities](https://usersoffice.web.cern.ch/pre-arrival-formalities-and-information/) and [first-day onboarding](https://usersoffice.web.cern.ch/first-day-cern-and-onboarding) pages.
 
 Ask your supervisor:
 
-- Which CERN category applies to you.
 - Which documents your institute must provide.
 - Whether you need a CERN access card.
 - Whether you need safety courses, dosimetry, lab access, underground access, or radiation-area access.
@@ -42,7 +36,7 @@ Once your CERN account is available, verify the services you will use regularly:
 | GitLab or GitHub | You can access the repository used by your task. |
 | Indico | You can open the meetings, agendas, and materials for your group. |
 | Mattermost or email | You know where day-to-day discussion happens. |
-| LXPLUS, EOS, CVMFS, batch | You know whether your task needs CERN computing resources. |
+| LXPLUS, EOS, CVMFS, batch | You have access to CERN computing resources. |
 
 Official service pages:
 
@@ -59,28 +53,18 @@ Most SHiP software work eventually touches CERN computing services. You do not n
 
 ### AFS access at CERN
 
-AFS is CERN's authenticated shared filesystem for Unix-style home directories and some collaboration areas. On CERN-managed Linux machines and on LXPLUS, AFS is normally mounted for you. The usual first check is:
+AFS is CERN's authenticated shared filesystem for Unix-style home directories and some collaboration areas. On CERN-managed Linux machines and on LXPLUS, AFS is normally mounted for you. You can check, whether you already subscribed to AFS on CERN Computing Resouces Portal: https://resources-portal.web.cern.ch/. 
 
+If you are subscribed, the usual first check will be:
 ```bash
 ssh <cern-username>@lxplus.cern.ch
 ls /afs/cern.ch/user/${USER:0:1}/${USER}
 ```
 
-If the directory is visible but access fails, refresh your CERN Kerberos and AFS credentials:
-
-```bash
-kinit <cern-username>@CERN.CH
-aklog
-tokens
-```
-
-Use `klist` to inspect Kerberos tickets and `tokens` to inspect AFS tokens. If `aklog` is missing on a personal machine, install the Kerberos and OpenAFS client packages recommended for your operating system, configure the CERN Kerberos realm, and enable the OpenAFS client for the CERN cell. For a first SHiP task, it is usually simpler to use LXPLUS until you know that your local AFS setup is needed.
-
 Ask your supervisor or the [CERN Service Portal](https://cern.service-now.com/service-portal) when:
 
 - Your CERN account works in the browser but not on LXPLUS.
 - You can read AFS but cannot write to the expected directory.
-- You need access to a project area outside your home directory.
 - You are unsure whether a task should use AFS, EOS, CERNBox, CVMFS, or Git.
 
 ### CERN SWAN
@@ -118,18 +102,17 @@ For a first contribution, prefer something small and observable. Good first task
 
 ## 6. Use this first-week checklist
 
-- [ ] Confirm your CERN registration category and institute paperwork.
-- [ ] Confirm your SHiP contact person and first task.
-- [ ] Activate CERN account access and sign in successfully.
-- [ ] Check your Users Portal profile.
-- [ ] Request required groups, mailing lists, meetings, and repository access.
-- [ ] Identify the relevant SHiP meeting on Indico.
-- [ ] Find the canonical repository or documentation page for your work.
-- [ ] Decide whether you should use a laptop, LXPLUS, container, CVMFS, or another environment.
-- [ ] Check whether your task needs AFS, EOS, CERNBox, CVMFS, SWAN, or batch access.
-- [ ] Reproduce one small documented command or workflow.
-- [ ] Record the commands, software versions, input files, and output location.
-- [ ] Agree on the first review or meeting date with your supervisor.
+- Confirm your CERN registration category and institute paperwork.
+- Confirm your SHiP contact person and first task.
+- Activate CERN account access and sign in successfully.
+- Request required groups, mailing lists, meetings, and repository access.
+- Identify the relevant SHiP meeting on Indico.
+- Find the canonical repository or documentation page for your work.
+- Decide whether you should use a laptop, LXPLUS, container, CVMFS, or another environment.
+- Check whether your task needs AFS, EOS, CERNBox, CVMFS, SWAN, or batch access.
+- Reproduce one small documented command or workflow.
+- Record the commands, software versions, input files, and output location.
+- Agree on the first review or meeting date with your supervisor.
 
 ## 7. Know where to ask
 
@@ -141,4 +124,4 @@ Use the narrowest support path that fits the problem:
 | CERN registration, contracts, access cards, local life | [CERN Users Office](https://usersoffice.web.cern.ch/) |
 | CERN service incident or access problem | [CERN Service Portal](https://cern.service-now.com/service-portal) |
 | Repository permissions or merge-request review | Repository maintainers or your SHiP contact |
-| Software setup, simulation, geometry, packaging | [SHiP software documentation](https://shipsoft.github.io/Documentation/) and the relevant maintainers |
+| Software setup, simulation, geometry, packaging | [SHiP software documentation](https://shipsoft.github.io/Documentation/), [SHiP software Mattermost Channel](https://mattermost.web.cern.ch/ship/channels/software)|
